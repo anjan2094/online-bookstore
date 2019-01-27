@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <header class="all-books">
+        <div class="header-section">
+            <div class="logo">
+                <img src="images/logo.jpg">
+            </div>
+            <div class="wrap">
+                <div class="search">
+                    <input type="text" class="searchTerm" id="search-book" placeholder="What are you looking for?" onkeyup="searchBook()">
+                    <button type="submit" class="searchButton" value="search"><span>search</span>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="user"><label id="user"></label></div>
+            <div class="logout-button">
+                <button>Log Out</button>
+            </div>
+        </div>
+    </header>
+    <section class="book-logo">
+        <div class="title">
+            <h1>Welcome to bookstore</h1>
+        </div>
+        <div class="book-login-reg">
+            <div class="book-pic">
+                <img src="images/booklogo.png">
+            </div>
+            <div class="login-registration">
+                <div class="login-signup">
+                    <div class="container">
+                        <h3>Login</h3>
+                        <form>
+                            <input type="text" name="name" id="loginuser" placeholder="Enter the name">
+                            <button id="login-btn">Login</button>
+                        </form>
+                    </div>
+                    <div class="container">
+                        <h3>Sign up</h3>
+                        <form>
+                            <input type="text" name="name" id="username" placeholder="Enter the name">
+                            <button id="signup-btn">Sign up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="all-books">
+        <div id="book-list-container" class="book-list-container">
+            <div class="book-list">
+                <ul id="bks" class="bks"></ul>
+            </div>
+            <div class="all-books-container">
+                <div class="want-to-read-container">
+                    <h3>Want-To-Read-Books</h3>
+                    <ul id="want-to-read-container">
+
+                    </ul>
+                </div>
+                <div class="reading-container">
+                    <h3>Reading-Books</h3>
+                    <ul id="reading-container">
+
+                    </ul>
+                </div>
+                <div class="read-container">
+                    <h3>Read-Books</h3>
+                    <ul id="read-container">
+
+                    </ul>
+                </div>
+            </div>
+            <div id="want-to-read-popup" onclick="addToWant()">Book is already exist!!</div>
+        </div>
+    </section>
+</body>
+
+</html>
